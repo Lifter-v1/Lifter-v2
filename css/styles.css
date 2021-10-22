@@ -109,7 +109,8 @@ input[type="search"]::-webkit-search-cancel-button {
   top: 50%;
   left: 10%;
 }
-.ad-image{
+
+.ad-image {
   align-self: center;
   height: 400px;
   width: 200px;
@@ -168,8 +169,6 @@ input[type="search"]::-webkit-search-cancel-button {
   padding: 3% 2%;
 }
 
-
-
 .price-text {
   font-size: 3rem;
   line-height: 1.5;
@@ -208,12 +207,11 @@ input[type="search"]::-webkit-search-cancel-button {
   color: #4C4C6D;
 }
 
-.modal-title{
+.modal-title {
   width: 100%;
   text-align: center;
   color: black;
 }
-
 
 .modal-body {
   color: black;
@@ -230,15 +228,15 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 .form-control:focus {
-  box-shadow:  5px 5px 5px black;
+  box-shadow: 5px 5px 5px black;
   border-color: black;
-
 }
 
 .loginC {
   width: 100%;
   text-align: center;
 }
+
 .forgot {
   width: 100%;
   text-align: center;
@@ -253,15 +251,11 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 /*footer*/
-
 #footer .container-fluid {
   padding: 2% 0%;
 }
 
-form .bootstrap-select{
-  width: 100%!important;
+form .bootstrap-select {
+  width: 100% !important;
   min-width: 190px;
-}
-
-.ad {
 }

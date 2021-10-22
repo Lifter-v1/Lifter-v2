@@ -298,7 +298,7 @@ function getUserMatches() {
   }
 }
 
-//vidhi - display user results
+// - display user results
 function showSearchResults(no) {
   if(filterResult[no]) {
     var info = filterResult[no];
@@ -530,7 +530,7 @@ $(document).ready(function () {
     getUserMatches();
   });
 
-  // for messages section - Vidhi Vora
+  // for messages section 
   setInterval(function () {
     if (current_active_tab == "messagesTab") {
       checkIfNewMesage();

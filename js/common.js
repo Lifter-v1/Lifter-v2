@@ -1,6 +1,5 @@
 
-
-//Vidhi- LOGIN API
+//- LOGIN API
 $("#userlogin").on("click", function () {
     let email = $("#validationCustom01").val();
     if (!validateEmail(email)) {
