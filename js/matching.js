@@ -10,17 +10,17 @@ function checkUserLoggedIn() {
     url: url + "checkUserLoggedIn",
     type: "POST",
     crossDomain: true,
-    success: function (response) {
-      if (response.status == "failure") {
-        alert('Log in first');
-        window.location.href = '../index.html';
-      } else {
-        sessionInfo = response.data.data;
-        user_id = sessionInfo.user_id;
-        $("#accessUserInfo").attr('data-userid', sessionInfo.reg_id);
-        $("#avatarimguser").attr("src", "../images/user_picture/" + user_id + ".jpeg");
-        getUserMatches();
-      }
+    // success: function (response) {
+    //   if (response.status == "failure") {
+    //     alert('Log in first');
+    //     window.location.href = '../index.html';
+    //   } else {
+    //     sessionInfo = response.data.data;
+    //     user_id = sessionInfo.user_id;
+    //     $("#accessUserInfo").attr('data-userid', sessionInfo.reg_id);
+    //     $("#avatarimguser").attr("src", "../images/user_picture/" + user_id + ".jpeg");
+    //     getUserMatches();
+    //   }
     },
     error: function () {
     }
@@ -298,13 +298,13 @@ function getUserMatches() {
   }
 }
 
-//vidhi - display user results 
+//vidhi - display user results
 function showSearchResults(no) {
   if(filterResult[no]) {
     var info = filterResult[no];
     var html = '<img class="user" src="../images/user_picture/' + info.reg_id + '.jpeg" /><div class="profile"><div class="name">' + info.name + '</div></div>';
     $("#filtermatchesdiv").html(html);
-  
+
     var html1 = '<label>Name: ' + info.name + '</label></br><label>Zipcode: ' + info.zip_code + '</label></br><label>Gender: ' + info.gender + '</label></br><label>Birthdate: ' + new Date(info.birthdate).toISOString().substring(0, 10) + '</label></br><label>Passion: ' + info.activity_type.replaceAll('_', ' ').replaceAll(',', ', ').replace(/(^([a-zA-Z\p{M}]))|([ -][a-zA-Z\p{M}])/g,
       function ($1) {
         return $1.toUpperCase();
