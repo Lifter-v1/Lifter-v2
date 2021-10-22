@@ -9,7 +9,7 @@ var saltRounds = 1;
 
 var app = express();
 
-app.use(express.static("public"));
+app.use(express.static(__dirname));
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({
   extended: true
@@ -25,19 +25,15 @@ const LifterSchema = new mongoose.Schema({
   password: String
 });
 
-
-
-
-
 const Lifter = new mongoose.model("Lifter", LifterSchema);
 
 app.get("/", function(req, res) {
-  res.render("../public/html/index")
-})
+  res.render("index")
+});
 
 app.get("/register", function(req, res) {
-  res.render("../public/html/register")
-})
+  res.render("register")
+});
 
 app.post("/register", function(req, res) {
 
@@ -50,13 +46,11 @@ app.post("/register", function(req, res) {
       if (err) {
         console.log(err);
       } else {
-        res.render("../public/html/myProfile")
+        res.render("myProfile")
       }
     });
   });
-
-
-})
+});
 
 app.post("/", function(req, res, window) {
   const email = req.body.email;
@@ -71,7 +65,7 @@ app.post("/", function(req, res, window) {
       if (foundLifter) {
         bcrypt.compare(password, foundLifter.password, function(err, result) {
           if (result === true) {
-            res.render("../public/html/myProfile")
+            res.render("myProfile")
           } else {
             res.send("Incorrect Password")
           }
@@ -84,28 +78,28 @@ app.post("/", function(req, res, window) {
 });
 
 app.get("/myProfile", function(req, res) {
-  res.render("../public/html/myProfile")
-})
+  res.render("myProfile")
+});
 
 app.get("/matching", function(req, res) {
-  res.render("../public/html/matching")
-})
+  res.render("matching")
+});
 
 app.get("/tnc", function(req, res) {
-  res.render("../public/html/tnc")
-})
+  res.render("tnc")
+});
 
 app.get("/support", function(req, res) {
-  res.render("../public/html/support")
-})
+  res.render("support")
+});
 
 app.get("/forgotPassword", function(req, res) {
-  res.render("../public/html/forgotPassword")
-})
+  res.render("forgotPassword")
+});
 
 app.get("/underConstruction", function(req, res) {
-  res.render("../public/html/underConstruction")
-})
+  res.render("underConstruction")
+});
 
 
 let port = process.env.PORT;
