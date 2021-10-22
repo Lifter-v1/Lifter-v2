@@ -177,11 +177,11 @@ button {
 
 .content {
   width: 100%;
-   display: flex;
+  display: flex;
   padding: 20px 0;
   align-items: center;
   flex-direction: column;
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 .content .card {
@@ -232,6 +232,7 @@ button {
   text-shadow: 1px 1px 5px #444;
 }
 
+/* buttons */
 .content .buttons {
   margin-top: 10px;
   display: flex;
@@ -239,24 +240,8 @@ button {
   margin-left: 90px;
 }
 
-.content .buttons .no i {
-  color: #fd2e79;
-  font-size: 32px;
-}
-
-.content .buttons .star i {
-  color: #05a11a;
-  font-size: 32px;
-}
-
-.content .buttons .heart i {
-  color: #11e298;
-  font-size: 32px;
-}
-
-.content .buttons .no,
-.content .buttons .star,
-.content .buttons .heart {
+ .buttons .no,
+ .buttons .dumbbell {
   background-color: #fff;
   width: 70px;
   height: 70px;
@@ -269,15 +254,31 @@ button {
   transition: 0.2s transform;
 }
 
-.content .buttons .no:hover,
-.content .buttons .star:hover,
-.content .buttons .heart:hover {
+.buttons {
+margin-top: 10px;
+display: flex;
+align-items: center;
+margin-left: 90px;
+}
+
+/* x */
+.no i {
+  color: #fd2e79;
+  font-size: 32px;
+}
+
+.no:hover {
   transform: scale(1.1);
 }
 
-.content .buttons .star {
-  width: 70px;
-  height: 70px;
+/* dumbbell */
+.dumbbell i {
+  color: #FFE194;
+  font-size: 32px;
+}
+
+.dumbbell:hover {
+transform: scale(1.1);
 }
 
 #messagesTabRow {

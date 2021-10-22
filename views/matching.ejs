@@ -13,7 +13,6 @@
     integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
     crossorigin="anonymous"></script>
 
-
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link
@@ -27,10 +26,13 @@
 
   <!-- CSS Stylesheets -->
   <link rel="stylesheet" href="css/matching.css">
+
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/ab3cb519ad.js" crossorigin="anonymous"></script>
+
   <!-- Favicon -->
   <link rel="icon" href="images/favicon1.ico">
+
   <!-- JS -->
   <script defer src="../js/matching.js" charset="utf-8"></script>
   <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -71,7 +73,7 @@
     <div class="side">
       <div class="header">
         <div class="avatar">
-          <img id="avatarimguser" src="../images/userImg.png" alt="">
+          <img id="avatarimguser" src="images/user_picture/userImg.png" alt="">
         </div>
         <a class="title" href="#">Find buddies</a>
       </div>
@@ -376,12 +378,14 @@
             </div>
           </div>
           <div class="buttons" id="filterbuttons" style="display: none;"> -->
+          <div class="buttons">
             <div class="no" id="viewNext">
               <i class="fas fa-times"></i>
             </div>
-            <div class="heart" id="viewProfile">
+            <div class="dumbbell" id="viewProfile">
               <i class="fas fa-dumbbell"></i>
             </div>
+          </div>
           </div>
         </div>
       </div>
@@ -431,11 +435,6 @@
       </div>
     </div>
   </div>
-  <footer class="white-section" id="footer">
-    <div class="container-fluid">
-      <p>© Copyright 2021 Lifter</p>
-    </div>
-  </footer>
   <!-- Modal -->
   <div class="modal fade" id="userinfo" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
     aria-hidden="true">
