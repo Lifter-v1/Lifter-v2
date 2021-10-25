@@ -81,8 +81,18 @@ app.get("/myProfile", function(req, res) {
   res.render("myProfile")
 });
 
+
+
 app.get("/matching", function(req, res) {
-  res.render("matching")
+var girlNames = Array("Emily","Hannah","Madison","Ashley","Sarah","Alexis","Samantha","Jessica","Elizabeth","Taylor","Lauren","Alyssa","Kayla","Abigail","Brianna","Olivia","Emma","Megan","Grace","Victoria","Rachel","Anna","Sydney","Destiny","Morgan")
+var randomGirlName = girlNames[Math.floor(Math.random()*girlNames.length)];
+var randomAge = Math.floor(Math.random() * (40 - 18 + 1)) + 18;
+var randomDistance = Math.floor(Math.random() * (100 - 1 + 1)) + 1;
+  res.render("matching", {
+    randomGirlName: randomGirlName,
+    randomAge: randomAge,
+    randomDistance: randomDistance
+  });
 });
 
 app.get("/tnc", function(req, res) {
