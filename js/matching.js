@@ -530,7 +530,7 @@ $(document).ready(function () {
     getUserMatches();
   });
 
-  // for messages section 
+  // for messages section
   setInterval(function () {
     if (current_active_tab == "messagesTab") {
       checkIfNewMesage();
@@ -540,3 +540,10 @@ $(document).ready(function () {
     }
   }, 5000);
 });
+
+// random number
+var randomAge = Math.floor(Math.random() * 40) + 18;
+
+
+//random distance
+var randomDistance = Math.floor(Math.random() * 0) + 100;

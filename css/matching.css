@@ -3,6 +3,16 @@ a {
   text-decoration: none;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f5f7fa;
+  margin: 0;
+}
+
 /* navbar */
 .navbar {
   padding: 0px 10px 10px;
@@ -34,23 +44,9 @@ a {
   background-color: #4C4C6D;
 }
 
-input[type="search"]::-webkit-search-cancel-button {
-  -webkit-appearance: none;
-}
-
 .form-control:focus {
   box-shadow: 5px 5px 5px black;
   border-color: black;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Roboto', sans-serif;
-  background-color: #f5f7fa;
-  margin: 0;
 }
 
 .container {
@@ -108,11 +104,11 @@ body {
 
 .side .menu li:hover {
   box-shadow: 0 0 15px 0 rgba(43, 78, 78, 0.1);
-  border-bottom: 5px solid #fd5068;
+  border-bottom: 5px solid #FFE194;
 }
 
 .side .menu .active {
-  border-bottom: 3px solid #fd5068;
+  border-bottom: 3px solid #FFE194;
   padding-bottom: 2px;
 }
 
@@ -149,7 +145,7 @@ body {
 
 .side .messages:hover {
   box-shadow: 0 0 15px 0 rgba(43, 78, 78, 0.1);
-  border-right: 5px solid #fd5068;
+  border-right: 5px solid #FFE194;
 }
 
 .myFriends {
