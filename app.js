@@ -46,7 +46,7 @@ app.post("/register", function(req, res) {
       if (err) {
         console.log(err);
       } else {
-        res.render("myProfile")
+        res.redirect("myProfile")
       }
     });
   });
